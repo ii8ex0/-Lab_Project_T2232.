@@ -2,6 +2,8 @@ DSC 200 Lab Project -Term 2232
 ================
 2024-05-18
 
+\*\*Student Name : SARAH ALmutairi
+
 **Student Name:<SARAH ALMURAIRI>**
 
 **Student ID:\<2221002218\>**
@@ -168,7 +170,21 @@ Write your narrative here
 
 \`8. (2 points)
 
-Write your narrative here
+``` r
+library(ggplot2)
+
+# Create a bar plot of species counts
+species_plot <- ggplot(seattlepets, aes(x = species)) +
+                geom_bar() +
+                labs(title = "Counts of Species", x = "Species", y = "Count") +
+                theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Display the plot
+print(species_plot)
+```
+
+![](Lab_project_files/figure-gfm/unnamed-chunk-8-1.png)<!-- --> Write
+your narrative here
 
 \`9. (2 points)
 
@@ -199,6 +215,23 @@ top_10_names
 
 \`b. Plot the counts of the pet names (animal_name) in top_10_names
 
+``` r
+# Create a subset of data for the top 10 most common pet names
+top_10_names <- c("Lucy", "Charlie", "Luna", "Bella", "Max", "Cooper", "Daisy", "Buddy", "Molly", "Stella")
+top_10_subset <- filter(seattlepets, animal_name %in% top_10_names)
+
+# Plot the counts of the pet names segmented by species
+pet_names_plot <- ggplot(top_10_subset, aes(x = animal_name, fill = species)) +
+                  geom_bar(position = "dodge") +
+                  labs(title = "Counts of Top 10 Pet Names Segmented by Species", x = "Pet Name", y = "Count") +
+                  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Display the plot
+print(pet_names_plot)
+```
+
+![](Lab_project_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+
 \`10. (2 points)
 
 \`The below code plots the proportion of dogs with a given name versus
@@ -225,10 +258,11 @@ exactly the same for dogs and cats.
 \`What names are more common for cats than dogs? The ones above the line
 or the ones below the line?
 
-\`Answer here………………
+\`Answer here…Dog:Lucy.Cat:Luna……………
 
 \`Is the relationship between the two variables (proportion of cats with
 a given name and proportion of dogs with a given name) positive or
 negative? What does this mean in context of the data?
 
-\`Answer here ………….
+\`Answer here .Positive,as the popularity of a name for dogs
+increases,so does the popularity of that name for cats…………
