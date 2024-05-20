@@ -149,6 +149,9 @@ filter(animal_name %in% c( "Lucy"  , "Charlie" , "Luna" , "Bella" , "Max"    ,
 top_10_names
 ```
 `a.	What does the above code chunk do?
+# Create a subset of data for the top 10 most common pet names
+top_10_names <- c("Lucy", "Charlie", "Luna", "Bella", "Max", "Cooper", "Daisy", "Buddy", "Molly", "Stella")
+top_10_subset <- filter(seattlepets, animal_name %in% top_10_names)
 
 
 
