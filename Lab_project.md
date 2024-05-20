@@ -211,10 +211,15 @@ top_10_names
     ## # ℹ 2,964 more rows
     ## # ℹ 3 more variables: secondary_breed <chr>, zip_code <chr>, pet <chr>
 
-\`a. What does the above code chunk do? \# Create a subset of data for
-the top 10 most common pet names top_10_names \<- c(“Lucy”, “Charlie”,
-“Luna”, “Bella”, “Max”, “Cooper”, “Daisy”, “Buddy”, “Molly”, “Stella”)
-top_10_subset \<- filter(seattlepets, animal_name %in% top_10_names)
+\`a. What does the above code chunk do?
+
+his code defines a vector top_10_names that contains the 10 most common
+pet names identified in Task 4. This list will be used to filter and
+analyze the dataset for these specific pet names. \# Create a subset of
+data for the top 10 most common pet names top_10_names \<- c(“Lucy”,
+“Charlie”, “Luna”, “Bella”, “Max”, “Cooper”, “Daisy”, “Buddy”, “Molly”,
+“Stella”) top_10_subset \<- filter(seattlepets, animal_name %in%
+top_10_names)
 
 \`b. Plot the counts of the pet names (animal_name) in top_10_names
 
